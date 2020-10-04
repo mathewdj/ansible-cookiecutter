@@ -1,12 +1,24 @@
 ---
 
 # Examples
-# - name: "Example homebrew: Install zsh"
+# - name: Example homebrew install
 #   homebrew:
 #     name: zsh
 #     state: latest
 
-# - name: "Example copy into home directory: Copy .hyper.js to ~/.hyper.js"
+# - name: Example copy into home directory: Copy .hyper.js to ~/.hyper.js
 #   copy:
 #     src: ".hyper.js"
 #     dest: "{{ lookup('env', 'HOME') }}/.hyper.js"
+
+# - name: Example check if rules file exists
+#   stat: 
+#     path: "{{ lookup('env', 'HOME') }}/.zshrc"
+#   register: zshrc_file
+
+# - name: Example Add source .functions to .zshrc, if ~/.zshrc exists
+#   lineinfile:
+#     path: "{{ lookup('env', 'HOME') }}/.zshrc"
+#     regexp: "^export JAVA_HOME="
+#     line: "export JAVA_HOME=$(/usr/libexec/java_home -v 11)"
+#   when: zshrc_file.stat.exists == true
