@@ -1,3 +1,8 @@
 {
-    "ansible_project_name": "ansible-project"
+    "ansible_project_name": "ansible-project",
+    "ansible_project_description": "This playbook can setup",
+    "author": "sorting-mjatt",
+    "_copy_without_render": [
+        "tasks/main.yml"
+    ]
 }
