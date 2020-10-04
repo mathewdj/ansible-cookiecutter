@@ -2,4 +2,4 @@
 - hosts: localhost
   connection: local
   roles:
-    - ../ansible-<project>
+    - ../{{cookiecutter.ansible_project_name}}
