@@ -5,7 +5,7 @@ This cookiecutter template is used to bootstrap a minimal self contained ansible
 1. Install cookiecutter
   ```pip3 cookiecutter```
 2. Generate project from a cookiecutter template:
-  ```cookiecutter https://github.com/sorting-mjatt/ansible-cookiecutter```
+  ```cookiecutter https://github.com/green-seagull/ansible-cookiecutter```
   OR local
   ```cookiecutter ${PWD}/ansible-cookiecutter```
 3. Add plays to the generated project:  
